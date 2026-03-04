@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor | Debasis Prusty</title>
+    <meta name="description" content="Online image editor with filters and presets built using HTML, CSS, and JavaScript.">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+
+    <!-- MAIN APP (Hidden Until Login) -->
+
+        <main>
+            <section>
+                <div class="left">
+                    <div class="top">
+
+                        <label for="image-input" class="btn">
+                            Choose image
+                            <input type="file" id="image-input" accept="image/*" hidden>
+                        </label>
+
+                        <button class="btn" id="reset-btn">Reset</button>
+                        <button class="btn" id="download-btn">Download</button>
+                    </div>
+
+                    <div class="bottom">
+                        <div class="placeholder">
+                            <i class="ri-image-line"></i>
+                            <p>No image Chosen</p>
+                        </div>
+                        <canvas id="image-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2>Filters</h2>
+                    <div class="filters"></div>
+
+                    <h2>Presets</h2>
+                    <div class="presets"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER INSIDE BODY -->
+        <footer class="footer">
+            © <span id="year"></span> 
+            <span class="brand">Debasis Prusty</span>. 
+            All rights reserved.
+        </footer>
+    
+
+
+    
+
+    <!-- YOUR MAIN JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
