@@ -168,54 +168,15 @@ canvas{
 
 }
 .footer {
-    position: relative; /* Change from fixed to relative */
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px; /* Push it away from the content */
+    padding: 12px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #9ca3af;   /* soft gray */
     background: #0f0f0f;
     border-top: 1px solid #222;
 }
-/* ===== MOBILE RESPONSIVE FIXES ===== */
-@media (max-width: 768px) {
-    main section {
-        flex-direction: column; /* Stacks the Image area and Filter area */
-        padding: var(--padding-md);
-        gap: var(--gutter-md);
-    }
-
-    main section .left, 
-    main section .right {
-        width: 100%; /* Makes both sections take full width */
-    }
-
-    main section .top {
-        flex-wrap: wrap; /* Allows buttons to wrap if they are too wide */
-        justify-content: center;
-    }
-
-    .btn {
-        flex: 1; /* Makes buttons grow to fill space on small screens */
-        text-align: center;
-        min-width: 120px;
-    }
-
-    main section .bottom {
-        aspect-ratio: auto; /* Allow height to adjust based on image */
-        min-height: 300px;
-        padding: var(--padding-md);
-    }
-
-    /* Fix the Sidebar Appearance on Mobile */
-    main section .right {
-        background-color: var(--bg-secondary-color);
-        padding: var(--padding-lg);
-        margin-bottom: 60px; /* Space for the fixed footer */
-    }
-
-    canvas {
-        width: 100%; /* Ensure the canvas fills the container */
-        height: auto;
-    }
-}
-
